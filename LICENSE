@@ -1,0 +1,59 @@
+RxnNet Software License
+Copyright (c) 2026 Dan Thomas Major. All rights reserved.
+
+0. Definitions
+•	"This License" refers to the terms of this license agreement.
+•	"Software" refers to the source code of RxnNet, including any modifications or derivative works of it.
+•	"Modification" refers to any modification, derivative work, or adaptation of the Software.
+
+1. Grant of License
+  By copying, installing or otherwise using RxnNet, you agree to be bound by the terms and 
+  conditions of this License Agreement. You may use, copy, modify, and distribute the Software 
+  under the following conditions:
+
+  1.	Non-Commercial Use
+      The Software is provided free of charge for academic, research, and non-commercial use only. 
+      You may use, modify, and distribute the Software for non-commercial purposes provided that 
+      you include the following acknowledgment in all copies or substantial portions of the Software:
+      "This software was developed as part of the RxnNet project by Dan Thomas Major."
+
+  2.	Modification and Derivative Works
+      You are allowed to modify the Software and create derivative works, provided that such modifications:
+      o	Are made open-source and are distributed under the terms of this License.
+      o	Remain part of the RxnNet project, and may not be renamed or distributed under a different name.
+      o	Must be made publicly available with full source code via a publicly accessible platform, such as GitHub.
+
+  3.	Commercial Use
+      The Software and any Modifications are not permitted for commercial use without explicit 
+      written permission from Dan Thomas Major. All commercial rights related to the Software 
+      and any derivative works are reserved exclusively for Dan Thomas Major. If you wish to use 
+      the Software commercially, you must seek a separate licensing agreement with the author.
+
+  4.	Rights to Commercialize Derivatives
+      You may not commercially exploit any Modifications, derivatives, or the Software itself 
+      unless you receive explicit permission in writing from Dan Thomas Major. You retain the rights 
+      to commercialize the Software and derivatives thereof, and such rights are not granted under this License.
+
+  5.	Publication Requirements
+      If you publish any research or findings that utilize or are based on the Software, you must cite the main RxnNet paper as follows:
+      "RxnNet: An AI Framework for Reaction Mechanism Discovery─A Case Study of Carbocations
+      Shani Zev, Michal Roth, Jishnu Narayanan S J, and Dan T. Major, J. Chem. Theory Comput. 2026 Article ASAP, DOI: 10.1021/acs.jctc.5c02103"
+      Failure to include proper citation in any publication that uses the Software constitutes a violation of this License.
+
+2. AI-based Modifications and Rebranding
+  You may not use any automated tools, including but not limited to artificial intelligence (AI), machine learning, 
+  or other automated systems, to reverse-engineer, rebrand, modify, or create derivative works from the Software 
+  with the intent to rename, market, or distribute the Software or its derivatives as your own. Any such activity is a 
+  violation of this License and may result in legal action.
+
+3. No Warranty
+  The Software is provided "as is", without warranty of any kind, express or implied, including but not limited to the 
+  warranties of merchantability, fitness for a particular purpose, or non-infringement. In no event shall Dan Thomas Major be 
+  liable for any direct, indirect, incidental, special, exemplary or consequential claim, damages, or other liability, 
+  whether in an action of contract, tort, or otherwise (including negligence), arising from, out of, or in connection with the 
+  Software or the use or other dealings in the Software.
+
+4. Termination
+  If you fail to comply with the terms of this License, your rights under this License will be automatically terminated. 
+  Upon termination, you must immediately stop using and distributing the Software and Modifications, and destroy all copies in your possession.
+
