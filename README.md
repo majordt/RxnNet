@@ -144,6 +144,7 @@ DFT					: True/False - Do DFT-level NEB with.
 DFT_INITIAL_GUESS	: Tru/False - If True, use NEB minimum energy paths generated with GFN2-xTB in the previous step as initial guess for DFT NEB.
 DFT_INPUT_ONLY		: True/False - If True, RxnNet only writes DFT ORCA inputs.
 DFT_METHOD			: DFT functional - 'M062X'
+DFT_BASIS_SET 		: Basis set - default 'def2-SVP'
 DFT_KEYWORDS		: DFT keywords ['defgrid3']
 DFT_NPROCS			: number processors to use for DFT calculations.
 ```
