@@ -62,6 +62,7 @@ DFT = False                            # True for DFT NEB
 DFT_INPUT_ONLY = True                  # True for only writing the DFT input files
 DFT_INITIAL_GUESS = True               # True to use XTB NEB MEP as initial guess
 DFT_METHOD = 'M062X'
+DFT_BASIS_SET = 'def2-TZVP'
 DFT_KEYWORDS = ['defgrid3', 'RIJCOSX', 'def2/J']
 DFT_NPROCS = 16
 DFT_MAXITER_GEOM = 500 
