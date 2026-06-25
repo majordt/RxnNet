@@ -1,0 +1,93 @@
+# =============================================================================
+# RxnNet Input File
+# =============================================================================
+# All keys are lowercase here; they are converted to uppercase internally.
+# Lines starting with '#' are comments. Remove the '#' to activate a setting.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Tree generation  (--mode run)
+# -----------------------------------------------------------------------------
+
+molecule_name: cyclooctatenol 
+molecule_smile: 'C/C1=C\C[C@@]2(C)CC[C@H]([C+](C)C)[C@@H]2CC/C(C)=C/CC1' #J1
+
+# Name of the reaction list variable inside reactions.py
+reaction_list_name: carbocations
+
+# Path to the reactions.py file (absolute or relative to working directory)
+reactions_path: reactions.py
+
+out_file_for_run: cyclooctatenol.log
+max_path_length_to_run: 2
+eliminate: ['=C=', '=[N+]=', '[CH2+]']
+max_tfd_value: 1
+impossible_smiles:
+  - 'C[C@]12CCCCC[C@@H]1C2'
+  - 'C[C@@]12CCCCC[C@H]1C2'
+
+
+# -----------------------------------------------------------------------------
+# Analysis  (--mode analyze)
+# -----------------------------------------------------------------------------
+
+smile_to_analyze: 'CC(C)[C@H]1CC[C@]2(C)C[C@@H]3[C@H](C)CC[C@H]3[C@@]3(C)C[C@H]3[C+]12' #cyclooctatenol 
+# mass_to_analyze: 272.25   # mutually exclusive with smile_to_analyze
+
+source_smile: 'C/C1=C\C[C@@]2(C)CC[C@H]([C+](C)C)[C@@H]2CC/C(C)=C/CC1' #J1
+
+max_path_length_to_analyze: 8
+out_file_for_analyze: cyclooctatenol_analyze.log
+ts_num_frames: 18
+align_to_product: true
+gen_cc_parameters: false
+num_confs_to_generate: 100
+charge: 1
+#machines: [localhost]
+# machines: [arkm01, arkm03]
+
+
+# -----------------------------------------------------------------------------
+# QM calculations  (--mode qm)
+# -----------------------------------------------------------------------------
+
+folder_name: '2026-05-08_15-53-55'
+
+# Optional: restrict QM to specific set subfolders. Use a single string, a
+# list of strings, or remove the key entirely to process all set* folders.
+qm_set_folders: set0
+# qm_set_folders: [set0, set1]
+
+out_file_for_qm: cyclooctatenol_QM.log
+# charge: 1   # already defined above; shared across modes
+multiplicity: 1
+
+orca_path: '/home/qnt/jishnunsj/softwares/orca601/orca'
+setenv_orca:
+  - 'LD_LIBRARY_PATH /home/qnt/majort/openmpi-4.1.6/lib/:${LD_LIBRARY_PATH}'
+  - 'PATH /home/qnt/majort/openmpi-4.1.6/bin/:${PATH}'
+  - 'PATH /home/qnt/jishnunsj/softwares/orca601/:${PATH}'
+  - 'XTBEXE /home/qnt/michalr/bin/xtb0/xtb-6.6.1/bin/xtb'
+
+# --- Semi-empirical (xTB) ---
+se: true
+cutoff: 100.0
+semi_empirical_method: GFN2-xTB
+semi_empirical_keywords: []
+semi_empirical_nprocs: 12
+se_initial_guess: true
+semi_empirical_maxiter_geom: 200
+semi_empirical_maxiter_scf: 500
+
+# --- DFT ---
+dft: false
+dft_input_only: true   # write ORCA input files only, do not run ORCA
+dft_method: M062X
+dft_basis_set: def2-SVP
+dft_keywords: [defgrid3, def2/J, RIJCOSX]
+dft_nprocs: 16
+dft_initial_guess: true
+dft_maxiter_geom: 1000
+dft_maxiter_scf: 1000
+neb_maxiter: 1000
